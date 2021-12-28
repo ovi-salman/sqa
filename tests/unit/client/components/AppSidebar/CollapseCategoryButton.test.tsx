@@ -3,8 +3,8 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import 'jest-extended'
 
-import { TestID } from '../../src/resources/TestID'
-import { CollapseCategoryListButton } from '../../src/client/components/AppSidebar/CollapseCategoryButton'
+import { TestID } from '@resources/TestID'
+import { CollapseCategoryListButton } from '@/components/AppSidebar/CollapseCategoryButton'
 
 describe('<CollapseCategoryButton />', () => {
   it('renders the CollapseCategoryButton component', () => {

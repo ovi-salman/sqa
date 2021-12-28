@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -9,9 +7,13 @@ import { TestID } from '@resources/TestID'
 import { EmptyEditor } from '@/components/Editor/EmptyEditor'
 
 describe('<EmptyEditor />', () => {
- 
+  it('renders the EmptyEditor component', () => {
+    const component = render(<EmptyEditor />)
 
-  it('renders the EmptyEditor component with keyboard', () => {
+    expect(component).toBeTruthy()
+  })
+
+  it('renders the EmptyEditor component and its texts', () => {
     const component = render(<EmptyEditor />)
 
     const createNoteText = component.queryByTestId(TestID.EMPTY_EDITOR)

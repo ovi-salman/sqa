@@ -4,8 +4,8 @@ import '@testing-library/jest-dom'
 import 'jest-extended'
 import { Camera } from 'react-feather'
 
-import { TestID } from '../../src/resources/TestID'
-import { IconButton, IconButtonProps } from '../../src/client/components/SettingsModal/IconButton'
+import { TestID } from '@resources/TestID'
+import { IconButton, IconButtonProps } from '@/components/SettingsModal/IconButton'
 
 describe('<IconButton />', () => {
   it('renders the IconButton component', () => {

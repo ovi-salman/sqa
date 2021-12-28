@@ -1,5 +1,7 @@
 import React from 'react'
-import { shallow, mount, render } from 'enzyme';
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import 'jest-extended'
 
 import { TestID } from '@resources/TestID'
 import {
@@ -8,14 +10,14 @@ import {
 } from '@/components/AppSidebar/AddCategoryButton'
 
 describe('<AddCategoryButton />', () => {
-  it('Creates A Catagory', () => {
-    const enabledProps = {
-      handler: jest,
+  it('renders the AddCategoryButton component', () => {
+    const enabledProps: AddCategoryButtonProps = {
+      handler: jest.fn,
       label: 'Test',
       dataTestID: TestID.ADD_CATEGORY_BUTTON,
     }
 
-    const component = shallow(<AddCategoryButton />)
+    const component = render(<AddCategoryButton {...enabledProps} />)
 
     expect(component).toBeTruthy()
   })
